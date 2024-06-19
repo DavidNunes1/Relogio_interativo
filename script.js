@@ -26,8 +26,11 @@ function diasemana(diasem){
 
 
 function main(){
+    
     var msg = document.getElementById("msg")
-    var img = document.getElementById("imagem")
+    var imgmanha = document.getElementById("imgmanha")
+    var imgtarde = document.getElementById("imgtarde")
+    var imgnoite = document.getElementById("imgnoite")
     var titolo = document.getElementById("titolo")
     var data = new Date()
     var dia = data.getDate()
@@ -45,19 +48,31 @@ function main(){
     titolo.innerText = `${dia}/${mes}/${ano} - ${diasem}`
     msg.innerHTML = `<strong>${hora}:${minutos}</strong>`
     if (hora >=7 && hora <=12){
-        img.src = 'manha.png'
+        setTimeout(5000)
+        imgmanha.src = "manhag.png"
+        imgtarde.src = "tardep.png"
+        imgnoite.src = "noitep.png"
         document.body.style.background = "rgb(255,225,107)"
         secssao.style.background = "rgb(218, 218, 218)"
-    }
-    if (hora >12 && hora <=18){
-        img.src = 'tarde.png'
+        setTimeout(5000)
+    }else if (hora >12 && hora <=18){
+        setTimeout(5000)
+        imgmanha.src = "manhap.png"
+        imgtarde.src = "tardeg.png"
+        imgnoite.src = "noitep.png"
         document.body.style.background = "rgb(255,151,94)"
         secssao.style.background = "rgb(174, 174, 174)"
-    }else if(hora > 18){
-        img.src = 'noite.png'
+        setTimeout(5000)
+    }else if(hora > 18 || hora < 7){
+        setTimeout(5000)
+        imgmanha.src = "manhap.png"
+        imgtarde.src = "tardep.png"
+        imgnoite.src = "noiteg.png"
         document.body.style.background = "rgb(166,88,91)"
         secssao.style.background = "rgb(94, 94, 94)"
+        setTimeout(5000)
     }
+    setTimeout(5000)
 }
 
 

@@ -26,7 +26,16 @@ div#msg{
 div#foto{
     margin-top: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+img#imgmanha{
+    margin-right: 20px;
+}
+img#imgnoite{
+    margin-left: 20px;
 }
 
 footer{
