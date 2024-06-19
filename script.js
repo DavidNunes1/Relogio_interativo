@@ -38,6 +38,7 @@ function main(){
     var hora = data.getHours()
     var minutos = data.getMinutes()
     var minutos = minutos.toString()
+    var secssao = document.getElementById("secssao")
     if(minutos.length <2){
         minutos = "0" + minutos
     }
@@ -45,11 +46,17 @@ function main(){
     msg.innerHTML = `<strong>${hora}:${minutos}</strong>`
     if (hora >=7 && hora <=12){
         img.src = 'manha.png'
+        document.body.style.background = "rgb(255,225,107)"
+        secssao.style.background = "rgb(218, 218, 218)"
     }
     if (hora >12 && hora <=18){
         img.src = 'tarde.png'
+        document.body.style.background = "rgb(255,151,94)"
+        secssao.style.background = "rgb(174, 174, 174)"
     }else if(hora > 18){
         img.src = 'noite.png'
+        document.body.style.background = "rgb(166,88,91)"
+        secssao.style.background = "rgb(94, 94, 94)"
     }
 }
 
